@@ -71,4 +71,4 @@ def product_strategy_meeting(app_idea):
     print(f"[PROJECT LEAD - FINAL PLAN]:\n{final_plan}")
 
 if __name__ == "__main__":
-    product_strategy_meeting("I want a way to for my macbook to communicate with my iphone such that when I bring my iphoone to a suitable distance my macbook wakes up from sleep and when I move away It goes back to sleep")
+    product_strategy_meeting("I want a way to for my macbook to communicate with my iphone such that when I bring my iphone to a suitable distance my macbook wakes up from sleep and when I move away It goes back to sleep")
