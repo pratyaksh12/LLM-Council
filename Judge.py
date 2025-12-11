@@ -1,26 +1,26 @@
-import google.generativeai as genai
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+from AgentBase import AgentBase
+import os
+from groq import Groq
 
+# Initialize Groq Client (Shared or Local)
+# For safety, we init inside the class or globally if keys are guaranteed
+groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-class Judge(AgnetBase):
-    """Judge blueprint for all council members"""
-    def __init__(self, name, system_prompt, model = "gemini-2.0-flash-exp"):
+class Judge(AgentBase):
+    """Judge using Groq Llama 3.3 70B"""
+    def __init__(self, name, system_prompt, model="llama-3.3-70b-versatile"):
         super().__init__(name, system_prompt)
-
-        self.model = genai.GenerativeModel(
-            model_name = model,
-            system_instruction = system_prompt
-        )
-        self.chat = self.model.start_chat(history=[])
-
-
+        self.model = model
 
     def speak(self, conversation_history: list):
-        # handle history statefully
-        # raw string can be converted to coherent prompt
+        # Groq is stateless, so we pass the full history
+        # We prepend the system prompt here as well
+        messages = [{"role": "system", "content": self.system_prompt}]
+        messages.extend(conversation_history)
 
-        # extract last message as content for the 'new input'
-        last_message = conversation_history[-1]['content'] if conversation_history else "Start."
-
-        response = self.chat.send_message(last_message)
-        return response.text
+        completion = groq_client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+            temperature=0.7
+        )
+        return completion.choices[0].message.content
