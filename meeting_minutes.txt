@@ -1,0 +1,125 @@
+**Project Initiation Document (PID)**
+
+**Project Title:** MacBook-iPhone Proximity Wake/Sleep Feature
+
+**Project Overview:**
+The MacBook-iPhone Proximity Wake/Sleep Feature is a new feature that allows the MacBook to wake up and go to sleep based on the proximity of the iPhone. The feature uses Bluetooth Low Energy (BLE) to detect the iPhone and trigger the wake and sleep logic.
+
+**Objectives:**
+
+1. Detect the presence of an iPhone within a specified distance from the MacBook.
+2. Wake up the MacBook from sleep when the iPhone is nearby.
+3. Put the MacBook back to sleep when the iPhone is moved away.
+4. Ensure a seamless and reliable experience for the user.
+
+**Scope:**
+
+* The feature will work on macOS and iOS devices.
+* The feature will use existing technologies and APIs to minimize development effort.
+* The feature will be designed to work in a variety of environments, including home, office, and public spaces.
+
+**Stakeholders:**
+
+* MacBook users who want to conveniently wake up their device when they approach with their iPhone.
+* Apple developers and engineers who will review and approve the feature.
+* Quality Assurance (QA) team who will test the feature.
+
+**Assumptions and Dependencies:**
+
+* The MacBook and iPhone will have Bluetooth and Wi-Fi capabilities enabled.
+* The MacBook and iPhone will be connected to the same iCloud account.
+* The feature will not interfere with other MacBook or iPhone features.
+
+**Risks:**
+
+* Technical difficulties with implementing the feature.
+* Potential security or privacy concerns.
+* User experience issues, such as false positives or negatives.
+
+**Timeline:**
+The project will take approximately 12 weeks to complete, with the following milestones:
+
+* Week 1-2: Research and planning.
+* Week 3-6: Development.
+* Week 7-10: Testing and quality assurance.
+* Week 11-12: Review, approval, and deployment.
+
+**Budget:**
+The budget for this project will be approximately $100,000, broken down into:
+
+* Personnel: $60,000 (development, testing, and project management).
+* Equipment and software: $20,000 (MacBook, iPhone, and development tools).
+* Miscellaneous: $20,000 (travel, training, and contingency fund).
+
+**Technical Requirements:**
+
+* The feature will use BLE to detect the iPhone.
+* The feature will use macOS APIs to wake up and put the MacBook to sleep.
+* The feature will use iCloud to store the iPhone's unique identifier.
+
+**Technical Design:**
+
+* The feature will consist of three main components: BLE scanner, wake and sleep logic, and iPhone detection.
+* The BLE scanner will use Core Bluetooth to detect the iPhone.
+* The wake and sleep logic will use macOS APIs to wake up and put the MacBook to sleep.
+* The iPhone detection will use the iPhone's unique identifier to detect the iPhone.
+
+**Testing and Validation:**
+
+* The feature will be tested on a variety of MacBook and iPhone models.
+* The feature will be tested in different environments, including home, office, and public spaces.
+* The feature will be validated to ensure it works as expected and meets the requirements.
+
+**Deployment:**
+
+* The feature will be deployed to the production environment.
+* The feature will be monitored to ensure it works as expected and fix any issues that arise.
+
+**Acceptance Criteria:**
+
+* The feature will be considered complete when it meets the following criteria:
+	+ The MacBook wakes up from sleep when the iPhone is nearby.
+	+ The MacBook goes back to sleep when the iPhone is moved away.
+	+ The feature works seamlessly and reliably in different environments.
+
+**Project Team:**
+
+* Project Lead: [Name]
+* Lead Engineer: [Name]
+* Software Engineers: [Name], [Name]
+* QA Engineer: [Name]
+* Project Manager: [Name]
+
+**Communication Plan:**
+
+* The project team will meet weekly to discuss progress and issues.
+* The project team will use collaboration tools, such as Slack and Trello, to communicate and track progress.
+* The project team will provide regular updates to stakeholders.
+
+**Risk Management:**
+
+* The project team will identify and assess risks throughout the project.
+* The project team will develop and implement mitigation strategies to minimize risks.
+* The project team will monitor and review risks regularly.
+
+**Quality Management:**
+
+* The project team will follow best practices for software development, including coding standards and testing.
+* The project team will conduct regular code reviews and testing to ensure quality.
+* The project team will use automated testing tools to ensure quality.
+
+**Change Management:**
+
+* The project team will follow a change management process to ensure that changes are properly assessed, approved, and implemented.
+* The project team will use a change management tool, such as JIRA, to track and manage changes.
+
+By signing below, the project team and stakeholders acknowledge that they have read, understand, and agree to the contents of this Project Initiation Document (PID).
+
+**Signatures:**
+
+* Project Lead: _____________________________________________
+* Lead Engineer: _____________________________________________
+* Software Engineers: _____________________________________________
+* QA Engineer: _____________________________________________
+* Project Manager: _____________________________________________
+* Stakeholders: _____________________________________________

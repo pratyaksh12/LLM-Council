@@ -57,6 +57,19 @@ def run_council(topic):
 
         time.sleep(2)
 
+    # Generate the summary
+    print("\n[SYSTEM]: Generating final summary...")
+    summary_prompt = "The meeting is over. Generate a comprehensive Project Initiation Document (PID) summarizing everything agreed upon above."
+
+    final_history = history + [{"role": "user", "content": summary_prompt}]
+    final_summary = agents["Project Lead"].speak(final_history)
+
+    print(f"========FINAL SUMMARY=======\n")
+    with open("meeting_minutes.txt", "w") as f:
+        f.write(final_summary)
+
+
+
 
 
 if __name__ == "__main__":
