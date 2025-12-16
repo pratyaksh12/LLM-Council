@@ -35,11 +35,10 @@ class Router(AgentBase):
 
         raw_decision = completion.choices[0].message.content.strip()
         
-        # --- ROBUSTNESS FIX ---
+        # FIX!!!!!!!
         clean_decision = raw_decision.replace(".", "").replace('"', "").replace("'", "").strip()
         
-        # Fallback for empty strings
         if not clean_decision:
-            return "Project Lead" # Safe default
+            return "Project Lead" #default
             
         return clean_decision
