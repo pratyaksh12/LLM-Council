@@ -24,7 +24,7 @@ class Router(AgentBase):
         messages = [{"role": "system", "content": self.system_prompt}]
         messages.extend(conversation_history)
         
-        # Add a gentle nudge at the end to force a name
+        # force bame
         messages.append({"role": "user", "content": f"Who speaks next? Choose from [{', '.join(self.names)}] or TERMINATE."})
 
         completion = groq_client.chat.completions.create(
